@@ -1,0 +1,6 @@
+framework module JMDeepLink {
+  umbrella header "JMDeepLink.h"
+
+  export *
+  module * { export * }
+}
