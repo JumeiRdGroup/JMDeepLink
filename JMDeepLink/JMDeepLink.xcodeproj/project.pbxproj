@@ -33,10 +33,10 @@
 		84AB65AE1EDFF7A000DD90E2 /* JMDeepLinkBaseRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 84AB658E1EDFF7A000DD90E2 /* JMDeepLinkBaseRequest.h */; };
 		84AB65AF1EDFF7A000DD90E2 /* JMDeepLinkBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AB658F1EDFF7A000DD90E2 /* JMDeepLinkBaseRequest.m */; };
 		84AB65B01EDFF7A000DD90E2 /* JMDeepLinkOpenRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 84AB65901EDFF7A000DD90E2 /* JMDeepLinkOpenRequest.h */; };
-		84AB65B11EDFF7A000DD90E2 /* JMDeepLinkOpenRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AB65911EDFF7A000DD90E2 /* JMDeepLinkOpenRequest.m */; };
 		84AB65B31EDFF7A000DD90E2 /* UIControl+Deeplink.h in Headers */ = {isa = PBXBuildFile; fileRef = 84AB65931EDFF7A000DD90E2 /* UIControl+Deeplink.h */; };
 		84AB65B41EDFF7A000DD90E2 /* UIControl+Deeplink.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AB65941EDFF7A000DD90E2 /* UIControl+Deeplink.m */; };
 		84AB65B81EDFF8DC00DD90E2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84AB65B71EDFF8DC00DD90E2 /* Info.plist */; };
+		D2659B6C1F0E1F20005E8F24 /* JMDeepLinkOpenRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AB65911EDFF7A000DD90E2 /* JMDeepLinkOpenRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -239,7 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84AB65B11EDFF7A000DD90E2 /* JMDeepLinkOpenRequest.m in Sources */,
+				D2659B6C1F0E1F20005E8F24 /* JMDeepLinkOpenRequest.m in Sources */,
 				84AB65AF1EDFF7A000DD90E2 /* JMDeepLinkBaseRequest.m in Sources */,
 				84AB65A11EDFF7A000DD90E2 /* JMDeepLinkInfo.m in Sources */,
 				84AB659D1EDFF7A000DD90E2 /* JMDeepLinkHelper.m in Sources */,
@@ -284,7 +284,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -337,7 +337,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -373,6 +373,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-fembed-bitcode";
 				PRODUCT_BUNDLE_IDENTIFIER = JuMei.JMDeepLink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -394,6 +395,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-fembed-bitcode";
 				PRODUCT_BUNDLE_IDENTIFIER = JuMei.JMDeepLink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
