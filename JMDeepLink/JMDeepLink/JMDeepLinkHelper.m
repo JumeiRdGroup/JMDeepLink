@@ -228,7 +228,7 @@
         NSUInteger offset = start.location+start.length;
         str = (end.location == NSNotFound)? [url substringFromIndex:offset]: [url substringWithRange:NSMakeRange(offset, end.location)];
         
-        str = [str stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        str = str.stringByRemovingPercentEncoding;
     }
     
     if (str==nil) {

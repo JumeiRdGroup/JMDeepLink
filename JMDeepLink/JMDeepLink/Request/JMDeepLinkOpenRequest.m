@@ -152,7 +152,7 @@
     
     NSMutableDictionary *dic = [@{} mutableCopy];
     
-    NSString *jumeimaillStr = [url stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *jumeimaillStr = url.stringByRemovingPercentEncoding;
     
     if ([NSString isNilOrNSNullOrEmptyOrWhitespace:jumeimaillStr]) {
         return [dic copy];
