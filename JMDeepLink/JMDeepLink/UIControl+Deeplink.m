@@ -21,7 +21,7 @@
 - (void)directSendAction:(SEL)action to:(nullable id)target forEvent:(nullable UIEvent *)event {
 
     NSLog(@"DeepLink Hook : action:%s, target:%@ forEvent:%@",sel_getName(action),target,event);
-    //右上角为UIStatusBarBreadcrumbItemView 右上角为UIStatusBarOpenInSafariItemView
+    //左上角为UIStatusBarBreadcrumbItemView 右上角为UIStatusBarOpenInSafariItemView
     if ([target isKindOfClass:NSClassFromString(@"UIStatusBarOpenInSafariItemView")]) {
         NSString *string = [target valueForKey:@"destinationText"];
         if ([string isEqualToString:[JMDeepLinkStatistics getInstance].goToSafariLabel]) {
